@@ -116,6 +116,7 @@ const GoldenFrame = new Sprite({
 
 
 const player = new Fighter({
+
     position: {
         x: 150,
         y: 400
@@ -175,7 +176,7 @@ const player = new Fighter({
         },
         width: 105,
         height: 50
-    }
+    } 
 })  
 
 player.draw() 
@@ -468,5 +469,7 @@ window.addEventListener('keyup', (event) => {
             keys.ArrowLeft.pressed = false
             break
     }
-}) 
+})  
+
+
 
