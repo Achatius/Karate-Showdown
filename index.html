@@ -46,7 +46,22 @@
         }
 
 
-        }
+        } 
+
+        @keyframes limitFrameRate {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    16.666666667%, 83.333333333% { /* 60 képkocka másodpercenként */
+        transform: translateY(0);
+    }
+    16.666666667% {
+        transform: translateY(-1px);
+    }
+    83.333333333% {
+        transform: translateY(1px);
+    }
+}
 
         @media screen and (max-width: 1440px) {
         * {
@@ -86,6 +101,8 @@
        
 
         }
+
+        
 
        
 
