@@ -12,7 +12,7 @@ function refreshPage() {
 let msPrev = window.performance.now()
 const fps = 60
 const msPerFrame = 1000 / fps
-
+//sound
 const audioArray = ['./sfx/ShigeruHurt1.wav', './sfx/ShigeruHurt2.wav'];
 
 const audioArray1 = ['./sfx/YoshitoHurt1.wav', './sfx/YoshitoHurt2.wav'];
