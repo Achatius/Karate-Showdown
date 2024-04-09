@@ -2,6 +2,8 @@ const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 let playerisJumping = false
 let enemyisJumping = false
+let isSpacePressed = false
+let isArrowDownPressed = false
 
 function refreshPage() {
     location.reload();
@@ -12,7 +14,6 @@ function refreshPage() {
 let msPrev = window.performance.now()
 const fps = 60
 const msPerFrame = 1000 / fps
-//sound
 const audioArray = ['./sfx/ShigeruHurt1.wav', './sfx/ShigeruHurt2.wav'];
 
 const audioArray1 = ['./sfx/YoshitoHurt1.wav', './sfx/YoshitoHurt2.wav'];
@@ -392,16 +393,20 @@ window.addEventListener('keydown', function(event) {
             }
             break   
         case ' ':
-            player.isAttacking = true; 
+            document.addEventListener('keydown', function(event) {
+                if (event.code === 'Space' && !isSpacePressed) {
+                    isSpacePressed = true;
+                    player.isAttacking = true;
+                    player.attack()
+                    setTimeout(() => {
+                        isSpacePressed = false;
+                        player.isAttacking = false;
+                    }, 1000);
+                }
+            });
             
-            if(player.isAttacking) {
-                player.attack()
-            } 
 
-            setTimeout(() => {
-                player.isAttacking = false;
-            }, 500);
-            
+
 
             player.image = player.sprites.attack.image 
             break  
@@ -426,15 +431,17 @@ window.addEventListener('keydown', function(event) {
             }
             break   
         case 'ArrowDown':
-            enemy.isAttacking = true; 
-            
-            if(enemy.isAttacking) {
-                enemy.attack()
-            } 
-
-            setTimeout(() => {
-                player.isAttacking = false;
-            }, 500);
+            document.addEventListener('keydown', function(event) {
+                if (event.code === 'ArrowDown' && !isArrowDownPressed) {
+                    isArrowDownPressed = true;
+                    enemy.isAttacking = true;
+                    enemy.attack()
+                    setTimeout(() => {
+                        isArrowDownPressed = false;
+                        enemy.isAttacking = false;
+                    }, 1000);
+                }
+            });
             
             enemy.image = enemy.sprites.attack.image
             break
