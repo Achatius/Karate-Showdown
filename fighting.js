@@ -402,7 +402,7 @@ window.addEventListener('keydown', function(event) {
                     setTimeout(() => {
                         isSpacePressed = false;
                         player.isAttacking = false;
-                    }, 2000);
+                    }, 1000);
                 }
             });
             
@@ -440,7 +440,8 @@ window.addEventListener('keydown', function(event) {
                     setTimeout(() => {
                         isArrowDownPressed = false;
                         enemy.isAttacking = false;
-                    }, 2000);
+                    }, 
+                    1000);
                 }
             });
             
