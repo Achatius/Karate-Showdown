@@ -171,7 +171,20 @@
     <script src="fighting.js"></script>
 </div>  
 
+<audio id="music">
+    <source src="sfx/Music.wav" type="audio/wav">
+  </audio>
 
+  <script>
+   const zeneElem = document.getElementById("music");
+
+document.addEventListener("keydown", (event) => {
+  const billentyu = event.key;
+  if (billentyu === " " || billentyu === "w" || billentyu === "a" || billentyu === "s" || billentyu === "d" || billentyu === "ArrowUp" || billentyu === "ArrowDown" || billentyu === "ArrowLeft" || billentyu === "ArrowRight") {
+    zeneElem.play();
+  }
+});
+  </script>
 
 <button class="restartbtn" style="position: absolute;" onclick="refreshPage()">Új játék</button>
 <button type="button" style="position: absolute;" class="button"><a href="index.html">Menű</a></button>

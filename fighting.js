@@ -4,7 +4,7 @@ let playerisJumping = false
 let enemyisJumping = false
 let isSpacePressed = false
 let isArrowDownPressed = false
-
+let music = new Audio('./sfx/Music.wav');
 function refreshPage() {
     location.reload();
 }
@@ -16,7 +16,9 @@ const fps = 60
 const msPerFrame = 1000 / fps
 const audioArray = ['./sfx/ShigeruHurt1.wav', './sfx/ShigeruHurt2.wav'];
 
-const audioArray1 = ['./sfx/YoshitoHurt1.wav', './sfx/YoshitoHurt2.wav'];
+const audioArray1 = ['./sfx/YoshitoHurt1.wav', './sfx/YoshitoHurt2.wav']; 
+
+
 
 function playRandomAudio() {
   const audioIndex = Math.floor(Math.random() * audioArray.length);
@@ -28,7 +30,9 @@ function playRandomAudio1() {
     const audioIndex = Math.floor(Math.random() * audioArray1.length);
     const playerHit = new Audio(audioArray1[audioIndex]);
     playerHit.play();
-}  
+}   
+
+
 
 
 
