@@ -30,15 +30,6 @@ function playRandomAudio1() {
     playerHit.play();
 }  
 
-var x = document.getElementById('./sfx/Music.wav'); 
-
-function playAudio() { 
-  x.play(); 
-} 
-
-function pauseAudio() { 
-  x.pause(); 
-} 
 
 
 // var ShigeruDeath = new Audio('./sfx/Shigeru1.wav');
