@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karate Showdown</title>
 </head>
-<body style="background-image: url(sprites/titles/Background.png);" class="background-image"> 
+<body style="background-image: url(sprites/titles/InvertBackground.png);" class="background-image"> 
     <style> 
         @media screen and (max-width: 2560px) {
         * {
@@ -140,20 +140,8 @@
 
     </style>
 
-    <img src="sprites/titles/Intro.gif" id="Intro" class="center">
+    <img src="sprites/titles/Buttons.png" id="Intro" class="center">
 
-        <script>
-            var kep = document.getElementById("Intro");
-
-            kep.onload = function() {
-            kep.addEventListener("animationend", function() {
-            kep.style.animationPlayState = "paused";
-            });
-            };
-        </script>
-
-    <button type="button" style="position: absolute;" class="button"><a href="game.html">Játssz</a></button>
-    <button type="button" style="position: absolute;" class="button1"><a href="https://github.com/Achatius/Karate-Showdown.git">GitHub</a></button>
-    <button type="button" style="position: absolute;" class="button2"><a href="buttons.html">Gombok</a></button>
+    <button type="button" style="position: absolute;" class="button"><a href="index.html">Vissza</a></button>
 </body>
 </html>
