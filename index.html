@@ -11,45 +11,7 @@
 </head>
 <body style="background-color:rgb(0, 0, 0);"> 
     <style> 
-
         @media screen and (max-width: 2560px) {
-            * {
-            box-sizing: border-box;
-
-        }  
-
-        body, html {
-            height: 100%;
-            scale: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        } 
-
-        .button {
-            scale: 150%;
-            border-radius: 20px;
-            background-color: rgb(160, 160, 160);
-            top: 640px;
-            right: 450px;
-            width: 10%;
-        } 
-
-        .button1 {
-            scale: 150%;
-            border-radius: 20px;
-            background-color: rgb(160, 160, 160);
-            top: 680x;
-            right: 450px;
-            width: 10%;
-        }
-
-
-        } 
-
-
-        @media screen and (max-width: 1440px) {
         * {
             box-sizing: border-box;
 
@@ -69,7 +31,7 @@
             scale: 150%;
             border-radius: 20px;
             background-color: rgb(160, 160, 160);
-            top: 640px;
+            top: 670px;
             right: 450px;
             width: 10%;
         } 
@@ -78,7 +40,7 @@
             scale: 150%;
             border-radius: 20px;
             background-color: rgb(160, 160, 160);
-            top: 680px;
+            top: 710px;
             right: 450px;
             width: 10%;
         }
@@ -112,7 +74,7 @@
             scale: 150%;
             border-radius: 20px;
             background-color: rgb(160, 160, 160);
-            top: 640px;
+            top: 620px;
             right: 450px;
             width: 10%;
         } 
@@ -121,7 +83,7 @@
             scale: 150%;
             border-radius: 20px;
             background-color: rgb(160, 160, 160);
-            top: 680px;
+            top: 660px;
             right: 450px;
             width: 10%;
         }
@@ -148,7 +110,18 @@
 
     </style>
 
-    <img src="sprites/titles/TitleImage.png" class="center">
+    <img src="sprites/titles/Intro.gif" id="Intro" class="center">
+
+        <script>
+            var kep = document.getElementById("Intro");
+
+            kep.onload = function() {
+            kep.addEventListener("animationend", function() {
+            kep.style.animationPlayState = "paused";
+            });
+            };
+        </script>
+
     <button type="button" style="position: absolute;" class="button"><a href="game.html">Játssz</a></button>
     <button type="button" style="position: absolute;" class="button1"><a href="https://github.com/Achatius/Karate-Showdown.git">GitHub</a></button>
 </body>
