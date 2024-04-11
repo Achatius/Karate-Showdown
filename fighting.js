@@ -285,10 +285,10 @@ function animate() {
     enemy.velocity.x = 0 
 
     if (keys.a.pressed && player.lastKey === 'a') {
-        player.velocity.x = -4
+        player.velocity.x = -6
         player.switchSprite('backward')
     } else if (keys.d.pressed && player.lastKey === 'd') {
-        player.velocity.x = 4
+        player.velocity.x = 6
         player.switchSprite('run')
     } else {
         player.switchSprite('idle')
@@ -303,10 +303,10 @@ function animate() {
 
     
     if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') {
-        enemy.velocity.x = -4
+        enemy.velocity.x = -6
         enemy.switchSprite('run')
     } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight') {
-        enemy.velocity.x = 4
+        enemy.velocity.x = 6
         enemy.switchSprite('backward')
     } else {
         enemy.switchSprite('idle')
