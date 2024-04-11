@@ -4,7 +4,7 @@ let playerisJumping = false
 let enemyisJumping = false
 let isSpacePressed = false
 let isArrowDownPressed = false
-let music = new Audio('./sfx/Music.wav');
+let music = new Audio('./sfx/Music.mp3');
 function refreshPage() {
     location.reload();
 }
@@ -14,9 +14,9 @@ function refreshPage() {
 let msPrev = window.performance.now()
 const fps = 60
 const msPerFrame = 1000 / fps
-const audioArray = ['./sfx/ShigeruHurt1.wav', './sfx/ShigeruHurt2.wav'];
+const audioArray = ['./sfx/ShigeruHurt1.mp3', './sfx/ShigeruHurt2.mp3'];
 
-const audioArray1 = ['./sfx/YoshitoHurt1.wav', './sfx/YoshitoHurt2.wav']; 
+const audioArray1 = ['./sfx/YoshitoHurt1.mp3', './sfx/YoshitoHurt2.mp3']; 
 
 
 
