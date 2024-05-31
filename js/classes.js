@@ -221,7 +221,70 @@ class Fighter extends Sprite {
                      this.image = this.sprites.death.image
                     this.framesMax = this.sprites.death.framesMax
                 } 
-                break
+                break  
+
+            case 'reverseidle':
+                    if (this.image !== this.sprites.idle.image)
+                        this.image = this.sprites.idle.image
+                        this.framesMax = this.sprites.idle.framesMax
+                        
+                        
+                    break
+            case 'reverserun': 
+                    if (this.image !== this.sprites.run.image)
+                        this.image = this.sprites.run.image
+                        this.framesMax = this.sprites.run.framesMax
+                        
+                        
+    
+                    break
+            case 'reversebackward': 
+                    if (this.image !== this.sprites.backward.image)
+                        this.image = this.sprites.backward.image
+                        this.framesMax = this.sprites.backward.framesMax
+                        
+                        
+    
+                    break
+            case 'reversejump':
+                    if (this.image !== this.sprites.jump.image) {
+                        this.image = this.sprites.jump.image
+                        this.framesMax = this.sprites.jump.framesMax
+                        this.framesCurrent = 0
+                        
+                    }  
+                    break 
+    
+    
+            case 'reversefall':
+                    if (this.image !== this.sprites.fall.image) {
+                        this.image = this.sprites.fall.image
+                        this.framesMax = this.sprites.fall.framesMax
+                        this.framesCurrent = 0
+                            
+                    } 
+    
+                    break
+            case 'reverseattack':
+                    if (this.image !== this.sprites.attack.image) {
+                        this.image = this.sprites.attack.image
+                        this.framesMax = this.sprites.attack.framesMax
+                        this.framesCurrent = 0
+                    } 
+                    break
+            case 'reversetakeHit':
+                    if (this.image !== this.sprites.takeHit.image) {
+                        this.image = this.sprites.takeHit.image
+                        this.framesMax = this.sprites.takeHit.framesMax
+                        this.framesCurrent = 0
+                    } 
+                    break 
+            case 'reversedeath':
+                    if (this.image !== this.sprites.death.image) {
+                         this.image = this.sprites.death.image
+                        this.framesMax = this.sprites.death.framesMax
+                    } 
+                    break
         }
     }
 } 
